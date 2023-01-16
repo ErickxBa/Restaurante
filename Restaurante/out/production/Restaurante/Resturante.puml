@@ -1,0 +1,44 @@
+@startuml
+
+class Restaurante {
+
+}
+
+abstract class Almuerzo {
+    - precio : double
+    - nombre : String
+    - descuento : boolean
+    - completo : boolean
+    + obtenerCobro(Cliente cliente) : double
+    + descontarSopa(double precioTotal) : double
+    + obtenerDescuento(Cliente cliente) : double
+}
+
+abstract class Cliente {
+    - nombre : String
+}
+
+class AlmuerzoEstudiantil {
+
+}
+
+class AlmuerzoEjecutivo {
+
+}
+
+class Estudiante {
+
+}
+
+class ClienteRegular {
+
+}
+' Restaurante tiene una dependencia de Almuerzo y Cliente
+Restaurante ...> Almuerzo
+Restaurante ...> Cliente
+AlmuerzoEjecutivo -|> Almuerzo
+AlmuerzoEstudiantil -|> Almuerzo
+Estudiante --|> Cliente
+ClienteRegular --|> Cliente
+
+@enduml

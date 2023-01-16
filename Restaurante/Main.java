@@ -5,13 +5,13 @@ public class Main {
         // si el solicitante es un estudiante. El almuerzo puede incluir sopa o no
         Restaurante restaurante = new Restaurante();
         String recibo =
-                restaurante.venderAlmuerzo(new AlmuerzoEstudiantil(false), new Estudiante("Henry"));
+                restaurante.venderAlmuerzo(new AlmuerzoEstudiantil(false), new Estudiante("Luisito"));
         String recibo2 =
-                restaurante.venderAlmuerzo(new AlmuerzoEstudiantil(false), new ClienteRegular("Carlos"));
+                restaurante.venderAlmuerzo(new AlmuerzoEstudiantil(false), new ClienteRegular("Fernando"));
         String recibo3 =
-                restaurante.venderAlmuerzo(new AlmuerzoEjecutivo(true), new ClienteRegular("Sebastian"));
+                restaurante.venderAlmuerzo(new AlmuerzoEjecutivo(true), new ClienteRegular("Pablo"));
         String recibo4 =
-                restaurante.venderAlmuerzo(new AlmuerzoEjecutivo(false), new Estudiante("Miguel"));
+                restaurante.venderAlmuerzo(new AlmuerzoEjecutivo(false), new Estudiante("Juanjo"));
 
         System.out.println(recibo);
         System.out.println(recibo2);
